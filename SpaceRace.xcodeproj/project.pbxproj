@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		DA80A65526507CA800B60FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A65426507CA800B60FAC /* AppDelegate.swift */; };
 		DA80A65726507CA800B60FAC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DA80A65626507CA800B60FAC /* GameScene.sks */; };
-		DA80A65926507CA800B60FAC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DA80A65826507CA800B60FAC /* Actions.sks */; };
 		DA80A65B26507CA800B60FAC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A65A26507CA800B60FAC /* GameScene.swift */; };
 		DA80A65D26507CA800B60FAC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A65C26507CA800B60FAC /* GameViewController.swift */; };
 		DA80A66026507CA800B60FAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA80A65E26507CA800B60FAC /* Main.storyboard */; };
 		DA80A66226507CAA00B60FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA80A66126507CAA00B60FAC /* Assets.xcassets */; };
+		DA80A66A26507D7200B60FAC /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = DA80A66926507D7200B60FAC /* explosion.sks */; };
+		DA80A66C26507D7A00B60FAC /* starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = DA80A66B26507D7A00B60FAC /* starfield.sks */; };
+		DA80A66E26507E4100B60FAC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA80A66D26507E4100B60FAC /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA80A65126507CA800B60FAC /* SpaceRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA80A65426507CA800B60FAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA80A65626507CA800B60FAC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		DA80A65826507CA800B60FAC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		DA80A65A26507CA800B60FAC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		DA80A65C26507CA800B60FAC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DA80A65F26507CA800B60FAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA80A66126507CAA00B60FAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA80A66326507CAA00B60FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA80A66926507D7200B60FAC /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
+		DA80A66B26507D7A00B60FAC /* starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starfield.sks; sourceTree = "<group>"; };
+		DA80A66D26507E4100B60FAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		DA80A64826507CA800B60FAC = {
 			isa = PBXGroup;
 			children = (
+				DA80A66D26507E4100B60FAC /* README.md */,
 				DA80A65326507CA800B60FAC /* SpaceRace */,
 				DA80A65226507CA800B60FAC /* Products */,
 			);
@@ -60,12 +65,13 @@
 			children = (
 				DA80A65426507CA800B60FAC /* AppDelegate.swift */,
 				DA80A65626507CA800B60FAC /* GameScene.sks */,
-				DA80A65826507CA800B60FAC /* Actions.sks */,
 				DA80A65A26507CA800B60FAC /* GameScene.swift */,
 				DA80A65C26507CA800B60FAC /* GameViewController.swift */,
 				DA80A65E26507CA800B60FAC /* Main.storyboard */,
 				DA80A66126507CAA00B60FAC /* Assets.xcassets */,
 				DA80A66326507CAA00B60FAC /* Info.plist */,
+				DA80A66926507D7200B60FAC /* explosion.sks */,
+				DA80A66B26507D7A00B60FAC /* starfield.sks */,
 			);
 			path = SpaceRace;
 			sourceTree = "<group>";
@@ -127,10 +133,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA80A66E26507E4100B60FAC /* README.md in Resources */,
 				DA80A66026507CA800B60FAC /* Main.storyboard in Resources */,
+				DA80A66A26507D7200B60FAC /* explosion.sks in Resources */,
 				DA80A65726507CA800B60FAC /* GameScene.sks in Resources */,
+				DA80A66C26507D7A00B60FAC /* starfield.sks in Resources */,
 				DA80A66226507CAA00B60FAC /* Assets.xcassets in Resources */,
-				DA80A65926507CA800B60FAC /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SpaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -311,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SpaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
