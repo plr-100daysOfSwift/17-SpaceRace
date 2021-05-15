@@ -67,14 +67,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	}
 
 	func didBegin(_ contact: SKPhysicsContact) {
-		let explosion = SKEmitterNode(fileNamed: "explosion")!
+		guard let explosion = SKEmitterNode(fileNamed: "explosion") else {
+			fatalError("Unable to create node using explosion.sks")
+		}
 		explosion.position = player.position
 		addChild(explosion)
 		player.removeFromParent()
 
 		isGaveOver = true
 	}
-	
+
 	override func update(_ currentTime: TimeInterval) {
 
 		for node in children {
