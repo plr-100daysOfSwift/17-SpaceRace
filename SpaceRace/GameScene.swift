@@ -10,8 +10,18 @@ import GameplayKit
 
 class GameScene: SKScene {
 
-	override func didMove(to view: SKView) {
+	var starfield: SKEmitterNode!
+	var player: SKSpriteNode!
+	var scoreLabel: SKLabelNode
 
+	var score = 0 {
+		didSet {
+			scoreLabel.text = "Score: \(score)"
+		}
+	}
+
+	override func didMove(to view: SKView) {
+		
 	}
 
 	override func update(_ currentTime: TimeInterval) {
