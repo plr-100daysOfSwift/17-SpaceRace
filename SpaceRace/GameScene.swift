@@ -82,6 +82,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 	}
 
+	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+		playerTouched = false
+		super.touchesEnded(touches, with: event)
+	}
+
 	func didBegin(_ contact: SKPhysicsContact) {
 		guard let explosion = SKEmitterNode(fileNamed: "explosion") else {
 			fatalError("Unable to create node using explosion.sks")
