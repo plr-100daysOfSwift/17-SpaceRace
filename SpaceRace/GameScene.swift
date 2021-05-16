@@ -22,6 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 	var possibleEnemies = ["ball", "hammer", "tv"]
 	var gameTimer: Timer?
+	var timeInterval = 1.0
 	var isGaveOver = false
 	var playerTouched = false
 
