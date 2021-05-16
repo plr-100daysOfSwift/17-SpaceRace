@@ -68,6 +68,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 	}
 
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		guard let touch = touches.first else { return }
+		let location = touch.location(in: self)
+		let tappedNodes = nodes(at: location)
+		guard let _ = tappedNodes.first(where: { node in
+			node.name == "player"
+		}) else {
+			return
+		}
+		playerTouched = true
+		super.touchesBegan(touches, with: event)
+
+	}
+
 	func didBegin(_ contact: SKPhysicsContact) {
 		guard let explosion = SKEmitterNode(fileNamed: "explosion") else {
 			fatalError("Unable to create node using explosion.sks")
