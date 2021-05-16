@@ -25,6 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var timeInterval = 1.0
 	var isGaveOver = false
 	var playerTouched = false
+	var enemyCount = 0
 
 	override func didMove(to view: SKView) {
 		backgroundColor = .black
