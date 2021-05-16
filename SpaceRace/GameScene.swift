@@ -66,6 +66,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		}
 
 		player.position = location
+		super.touchesMoved(touches, with: event)
 
 	}
 
