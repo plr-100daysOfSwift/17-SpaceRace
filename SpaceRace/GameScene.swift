@@ -52,7 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		physicsWorld.gravity = CGVector(dx: 0, dy: 0)
 		physicsWorld.contactDelegate = self
 
-		gameTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+		startTimer()
 	}
 
 	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -127,5 +127,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		sprite.physicsBody?.angularVelocity = 5
 		sprite.physicsBody?.angularDamping = 0
 		sprite.physicsBody?.linearDamping = 0
+
+	fileprivate func startTimer() {
+		gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
 	}
 }
