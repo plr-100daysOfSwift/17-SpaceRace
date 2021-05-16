@@ -23,6 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var possibleEnemies = ["ball", "hammer", "tv"]
 	var gameTimer: Timer?
 	var isGaveOver = false
+	var playerTouched = false
 
 	override func didMove(to view: SKView) {
 		backgroundColor = .black
