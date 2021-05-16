@@ -37,6 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		player.position = CGPoint(x: 100, y: 384)
 		player.physicsBody = SKPhysicsBody(texture: player.texture!, size: player.size)
 		player.physicsBody?.contactTestBitMask = 1
+		player.name = "player"
 		addChild(player)
 
 		scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
