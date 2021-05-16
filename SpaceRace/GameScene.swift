@@ -129,6 +129,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		sprite.physicsBody?.angularDamping = 0
 		sprite.physicsBody?.linearDamping = 0
 
+		enemyCount += 1
+
+		if enemyCount == 20 {
+			resetTimer()
+		}
+
+	}
+
+	func resetTimer() {
+		enemyCount = 0
+		timeInterval -= 0.1
+		gameTimer?.invalidate()
+		startTimer()
+	}
+
 	fileprivate func startTimer() {
 		gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
 	}
