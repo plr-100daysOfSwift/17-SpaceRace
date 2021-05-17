@@ -109,6 +109,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		player.removeFromParent()
 
 		isGaveOver = true
+		finalScoreLabel.text = "You scored \(score)!"
+		gameTimer?.invalidate()
+
+		DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+			self.addChild(self.finalScoreLabel)
+			self.restart()
+		}
 	}
 
 	override func update(_ currentTime: TimeInterval) {
