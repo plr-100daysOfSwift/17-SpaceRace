@@ -172,6 +172,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			self.finalScoreLabel.isHidden = true
 			self.score = 0
 			self.player.position = self.startPosition
+		// TODO: addChild sometimes raises an exception - node already has parent
 			self.addChild(self.player)
 			self.isGaveOver = false
 			self.timeInterval = 1.0
