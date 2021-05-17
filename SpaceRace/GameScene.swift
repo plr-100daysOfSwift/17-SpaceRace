@@ -158,4 +158,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	fileprivate func startTimer() {
 		gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
 	}
+
+	fileprivate func restart() {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+			self.finalScoreLabel.removeFromParent()
+			self.score = 0
+			self.player.position = self.startPosition
+			self.addChild(self.player)
+			self.isGaveOver = false
+			self.timeInterval = 1.0
+			self.startTimer()
+		}
+	}
+
 }
