@@ -56,6 +56,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		finalScoreLabel.fontName = "Chalkduster"
 		finalScoreLabel.fontSize = 48
 		finalScoreLabel.zPosition = 1
+		finalScoreLabel.isHidden = true
+		addChild(finalScoreLabel)
 
 		score = 0
 
@@ -113,8 +115,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		gameTimer?.invalidate()
 
 		DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-			self.addChild(self.finalScoreLabel)
-			self.restart()
+			self.finalScoreLabel.isHidden = false
+			self.perform(#selector(self.restart), with: nil, afterDelay: 3)
 		}
 	}
 
@@ -166,16 +168,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
 	}
 
-	fileprivate func restart() {
-		DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-			self.finalScoreLabel.removeFromParent()
+	@objc fileprivate func restart() {
+			self.finalScoreLabel.isHidden = true
 			self.score = 0
 			self.player.position = self.startPosition
 			self.addChild(self.player)
 			self.isGaveOver = false
 			self.timeInterval = 1.0
 			self.startTimer()
-		}
 	}
 
 }
