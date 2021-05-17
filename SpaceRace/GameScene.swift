@@ -106,14 +106,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	override func update(_ currentTime: TimeInterval) {
 
 		for node in children {
-			if node.position.x < -300 {
+			if node.position.x < -100 {
 				node.removeFromParent()
+				if !isGaveOver {
+					score += 1
+				}
 			}
 		}
 
-		if !isGaveOver {
-			score += 1
-		}
 	}
 
 	@objc func createEnemy() {
