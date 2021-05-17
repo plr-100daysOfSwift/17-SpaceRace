@@ -13,6 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var starfield: SKEmitterNode!
 	var player: SKSpriteNode!
 	var scoreLabel: SKLabelNode!
+	var finalScoreLabel: SKLabelNode!
 
 	var score = 0 {
 		didSet {
@@ -49,6 +50,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		scoreLabel.position = CGPoint(x: 16, y: 16)
 		scoreLabel.horizontalAlignmentMode = .left
 		addChild(scoreLabel)
+
+		finalScoreLabel = SKLabelNode(text: "You scored \(score)!")
+		finalScoreLabel.position = CGPoint(x: 512, y: 384)
+		finalScoreLabel.fontName = "Chalkduster"
+		finalScoreLabel.fontSize = 48
+		finalScoreLabel.zPosition = 1
 
 		score = 0
 
