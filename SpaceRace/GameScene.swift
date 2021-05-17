@@ -26,7 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var isGaveOver = false
 	var playerTouched = false
 	var enemyCount = 0
-	let maxEnemies = 20
+	let maxEnemies = 10
 
 	override func didMove(to view: SKView) {
 		backgroundColor = .black
