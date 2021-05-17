@@ -140,8 +140,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	}
 
 	func resetTimer() {
-		enemyCount = 0
 		timeInterval -= 0.1
+		guard timeInterval > 0 else { return }
+		enemyCount = 0
 		gameTimer?.invalidate()
 		startTimer()
 	}
