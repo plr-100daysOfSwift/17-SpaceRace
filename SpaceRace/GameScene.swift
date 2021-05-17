@@ -27,6 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var playerTouched = false
 	var enemyCount = 0
 	let maxEnemies = 10
+	let startPosition = CGPoint(x: 100, y: 384)
 
 	override func didMove(to view: SKView) {
 		backgroundColor = .black
@@ -38,7 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		starfield.zPosition = -1
 
 		player = SKSpriteNode(imageNamed: "player")
-		player.position = CGPoint(x: 100, y: 384)
+		player.position = startPosition
 		player.physicsBody = SKPhysicsBody(texture: player.texture!, size: player.size)
 		player.physicsBody?.contactTestBitMask = 1
 		player.name = "player"
